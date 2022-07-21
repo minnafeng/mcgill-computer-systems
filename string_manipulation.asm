@@ -1,7 +1,6 @@
 # This question is an exercise of working with and manipulating strings in MIPS 
 # The input string is hardcoded. The program should print the input string, perform the requested manipulation,
 # then print the output string
-# Please comment your work
 
 	.data
 
