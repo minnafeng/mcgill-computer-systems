@@ -1,5 +1,5 @@
 # This question is an exercise of working loops and user inputs
-# Please comment your work
+# Prompt user for an integer input and print whether it is a power of 2 or not. 
 
 	.data
 prompt:		.asciiz "\nEnter an Integer:\t"
