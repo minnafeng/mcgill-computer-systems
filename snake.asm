@@ -1,10 +1,9 @@
-# TODO: modify the info below
-# Student ID: 261051043
-# Name: Minna Feng
-# TODO END
-########### COMP 273, Winter 2022, Assignment 4, Question 3 - Snake ###########
+# Recreates the Snake video game using memory mapped I/O (MMIO)
+# Given the starter code, the goal is to add code to handle keyboard input using MMIO,
+# spawn red and blue food pills, and add walls to the game (inputed from a text file map.txt
+# consisting of a 64x64 square of 0s with 1s for wall placement)
 
-# Constant definition. You can use them like using an immediate.
+# Constant definitions
 # color definition:
 .eqv BLACK	0x00000000
 .eqv RED	0x00ff0000
@@ -619,8 +618,6 @@ initMap.newline:
 initMap.return:
 # TODO END
 	jr $ra
-	
-# TODO: add any helper functions here you if you need
 
 
 
