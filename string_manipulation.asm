@@ -1,5 +1,6 @@
 # This question is an exercise of working with and manipulating strings in MIPS 
-# The input string is hardcoded. The program should print the input string, perform the requested manipulation,
+# The input string is hardcoded. The program should print the input string, 
+# convert all uppercase letters to lowercase and all lowercase letters to uppercase,
 # then print the output string
 
 	.data
