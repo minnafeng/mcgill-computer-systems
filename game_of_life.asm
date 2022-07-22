@@ -1,28 +1,36 @@
-# TODO: modify the info below
-# Student ID: 261051043
-# Name: Minna Feng
-# TODO END
-########### COMP 273, Winter 2022, Assignment 4, Question 2 - Game of Life ###########
+# The game of life is a two-dimensional cellular automaton invented by British mathematician John H. Conway. 
+# The game simulates the evolution of a grid of cells. Each cell has two possible states: live or dead. 
+# The state of the cell in the next generation (let’s say the (i+1)th generation) is decided by its current state 
+# and the current states of its eight surrounding cells (the ith generation):
+# - A live cell will die if it has fewer than two live neighbours or more than three live neighbours
+# - A live cell will stay alive if it has two or three live neighbours
+# - A dead cell will come to life if it has exactly three live neighbours
+
+# The goal is to stimulate the game of life. The program should read the initial states of the cells 
+# (i.e., the cells at the 0th generation) from life-input.txt, read an integer n from the standard input, 
+# simulate the evolution for n generations, and write the states of the cells at the nth generation in life-output.txt.
+
+# The input file has multiple lines with the same lengths, each line is a string consists of characters “0”s and “1” 
+# representing the states of cells in the row (“0” means a dead cell, “1” means a live cell) ended with a newline character (“\n”). 
+# There are not any space or other delimiters in the string. The output file should have the same format and the same number of rows 
+# and columns as the input file.
 
 .data
-# You should use following two labels for opening input/output files
-# DO NOT change following 2 lines for your submission!
+
 inputFileName:	.asciiz	"life-input.txt"
 outputFileName:	.asciiz "life-output.txt"
-# TODO: add any variables here you if you need
+
 buffer:		.space 10100 # max number of bytes to read
 paddedBuffer:	.space 10404
 finalBuffer:	.space 10100
 
-# TODO END
 
 .text
 main:
 	# read the integer n from the standard input
 	jal readInt
 	# now $v0 contains the number of generations n you should simulate
-	
-# TODO: your code in main process here
+
 
 # A live cell will stay alive if it has two or three live neighbours
 # A dead cell will come to life if it has exactly three live neighbours
@@ -145,13 +153,12 @@ initialState:
 	j done
 	
 done:
-# TODO END
 
 	li $v0, 10	# exit the program
 	syscall
 
 
-# TODO: your helper functions here
+# Helper functions
 getDim:
 	# a0 = pointer to buffer
 	# a1 = number of chars read into buffer
@@ -419,9 +426,6 @@ removeBorder.next:
 	
 removeBorder.return:
 	jr $ra
-
-	
-# TODO END
 
 ########### Helper functions for IO ###########
 
