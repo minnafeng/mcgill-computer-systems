@@ -1,7 +1,4 @@
 # Recreates the Snake video game using memory mapped I/O (MMIO)
-# Given the starter code, the goal is to add code to handle keyboard input using MMIO,
-# spawn red and blue food pills, and add walls to the game (inputed from a text file map.txt
-# consisting of a 64x64 square of 0s with 1s for wall placement)
 
 # Constant definitions
 # color definition:
